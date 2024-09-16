@@ -24,11 +24,11 @@ class CompanyController extends Controller
     {
         //dd($request->all());
         $new_company = Company::create($request->all());
-        return response()->json(([
+        return response()->json([
             'status'=>true,
             'message'=>"New Company is created successfully",
             'data'=> $new_company
-        ]));
+        ]);
     }
 
     /**
